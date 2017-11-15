@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,87 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdZ-Gc-zj7">
-                                <rect key="frame" x="127" y="319" width="121" height="30"/>
-                                <state key="normal" title="Get Photo"/>
-                                <connections>
-                                    <action selector="getPhotoButton:" destination="Ga7-ix-Bwf" eventType="touchUpInside" id="VTt-3b-R4i"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="BMv-4H-TYH">
-                                <rect key="frame" x="0.0" y="101" width="375" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="532396881.906973">
-                                    <!--2017-11-15 00:01:21 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="datePickerDate:forEvent:" destination="Ga7-ix-Bwf" eventType="valueChanged" id="yPi-8R-5SX"/>
-                                </connections>
-                            </datePicker>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JYZ-nu-89q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="327"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GdZ-Gc-zj7" firstAttribute="leading" secondItem="fCx-Cv-N29" secondAttribute="leading" constant="127" id="EB0-G7-Vjz"/>
-                            <constraint firstItem="GdZ-Gc-zj7" firstAttribute="centerY" secondItem="peg-3h-NPT" secondAttribute="centerY" id="FmS-Fq-fi6"/>
-                            <constraint firstItem="BMv-4H-TYH" firstAttribute="leading" secondItem="peg-3h-NPT" secondAttribute="leading" id="MKd-b6-O6r"/>
-                            <constraint firstItem="fCx-Cv-N29" firstAttribute="trailing" secondItem="GdZ-Gc-zj7" secondAttribute="trailing" constant="127" id="WHg-Oo-5h6"/>
-                            <constraint firstItem="BMv-4H-TYH" firstAttribute="top" secondItem="fCx-Cv-N29" secondAttribute="top" constant="37" id="bsW-e9-u1w"/>
-                            <constraint firstItem="BMv-4H-TYH" firstAttribute="centerX" secondItem="GdZ-Gc-zj7" secondAttribute="centerX" id="qAZ-et-27j"/>
-                            <constraint firstItem="GdZ-Gc-zj7" firstAttribute="top" secondItem="BMv-4H-TYH" secondAttribute="bottom" constant="56" id="qU0-NE-CC7"/>
-                            <constraint firstItem="GdZ-Gc-zj7" firstAttribute="centerX" secondItem="peg-3h-NPT" secondAttribute="centerX" id="qfG-Qd-cQ0"/>
+                            <constraint firstItem="fCx-Cv-N29" firstAttribute="bottom" secondItem="JYZ-nu-89q" secondAttribute="bottom" constant="227" id="4EU-4n-MR0"/>
+                            <constraint firstItem="JYZ-nu-89q" firstAttribute="leading" secondItem="peg-3h-NPT" secondAttribute="leading" id="Wd8-XC-rWs"/>
+                            <constraint firstItem="JYZ-nu-89q" firstAttribute="top" secondItem="fCx-Cv-N29" secondAttribute="top" id="jK9-D9-gBn"/>
+                            <constraint firstAttribute="trailing" secondItem="JYZ-nu-89q" secondAttribute="trailing" id="nLv-DW-8UC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fCx-Cv-N29"/>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Of The Day" id="CUa-Rp-WOI"/>
                     <connections>
-                        <outlet property="dateSelector" destination="BMv-4H-TYH" id="wFc-tw-zFV"/>
+                        <outlet property="POTDImage" destination="JYZ-nu-89q" id="AXl-wg-xMe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upW-NT-5yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63.200000000000003" y="759.67016491754134"/>
-        </scene>
-        <!--Picture Of The Day-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="POTDViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JYZ-nu-89q">
-                                <rect key="frame" x="0.0" y="20" width="375" height="347"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="347" id="uFb-gl-lzj"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvg-St-Leg">
-                                <rect key="frame" x="16" y="375" width="343" height="292"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Qvg-St-Leg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="A3l-Yg-kLW"/>
-                            <constraint firstItem="Qvg-St-Leg" firstAttribute="top" secondItem="JYZ-nu-89q" secondAttribute="bottom" constant="8" symbolic="YES" id="DlX-5e-IBB"/>
-                            <constraint firstItem="Qvg-St-Leg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X6M-Ye-ECI"/>
-                            <constraint firstAttribute="trailing" secondItem="JYZ-nu-89q" secondAttribute="trailing" id="ZEP-MW-8IL"/>
-                            <constraint firstItem="JYZ-nu-89q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="diW-ad-wnA"/>
-                            <constraint firstItem="JYZ-nu-89q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kNM-LA-g3s"/>
-                            <constraint firstItem="Qvg-St-Leg" firstAttribute="centerX" secondItem="JYZ-nu-89q" secondAttribute="centerX" id="nwo-VR-CSZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Picture Of The Day" id="Sl4-ax-iyR"/>
-                    <connections>
-                        <outlet property="PhotoOfTheDay" destination="JYZ-nu-89q" id="VX6-lb-rdg"/>
-                        <outlet property="explanationText" destination="Qvg-St-Leg" id="JjK-4q-Aye"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1178" y="761"/>
         </scene>
         <!--Item-->
         <scene sceneID="lUU-za-470">
@@ -113,12 +52,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ga7-ix-Bwf" kind="relationship" relationship="rootViewController" id="z0s-fw-ssy"/>
+                        <segue destination="BYq-dV-qcK" kind="relationship" relationship="rootViewController" id="K6e-3x-Wb2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXZ-2t-poO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1038" y="761"/>
+            <point key="canvasLocation" x="-1746" y="682"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8XQ-JX-Vb5">
@@ -126,6 +65,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Yzc-RI-Ne6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T1S-X5-J2b">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -135,7 +75,45 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LC-Xe-htO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1430" y="-19"/>
+            <point key="canvasLocation" x="-1746" y="-258"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="mcr-1X-eaN">
+            <objects>
+                <viewController id="BYq-dV-qcK" customClass="MainViewController" customModule="NASA_PICTURE_OF_THE_DAY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="RLT-2R-S2R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NASA" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-kr-vUK">
+                                <rect key="frame" x="79" y="242" width="216" height="183"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inx-Gm-Ulf">
+                                <rect key="frame" x="96" y="501" width="182" height="30"/>
+                                <state key="normal" title="See Image Of The Day"/>
+                                <connections>
+                                    <segue destination="Ga7-ix-Bwf" kind="show" id="lIb-ic-fhs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="inx-Gm-Ulf" firstAttribute="trailing" secondItem="ARn-kr-vUK" secondAttribute="trailing" constant="-17" id="Hfy-Uy-z8N"/>
+                            <constraint firstItem="inx-Gm-Ulf" firstAttribute="top" secondItem="ARn-kr-vUK" secondAttribute="bottom" constant="76" id="PEr-nw-uhb"/>
+                            <constraint firstItem="ARn-kr-vUK" firstAttribute="centerY" secondItem="RLT-2R-S2R" secondAttribute="centerY" id="fac-V7-Ula"/>
+                            <constraint firstItem="inx-Gm-Ulf" firstAttribute="leading" secondItem="BuL-AV-Lk1" secondAttribute="leading" constant="96" id="jOW-Uz-BJD"/>
+                            <constraint firstItem="ARn-kr-vUK" firstAttribute="centerX" secondItem="RLT-2R-S2R" secondAttribute="centerX" id="kQa-0p-ovh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BuL-AV-Lk1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jCx-up-ccq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3n-2g-Pis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706.39999999999998" y="89.505247376311857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NASA" width="216" height="183"/>
+    </resources>
 </document>
