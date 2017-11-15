@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8962E84B1FBBAC5F000A0639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962E84A1FBBAC5F000A0639 /* AppDelegate.swift */; };
-		8962E84D1FBBAC5F000A0639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962E84C1FBBAC5F000A0639 /* ViewController.swift */; };
+		8962E84D1FBBAC5F000A0639 /* POTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962E84C1FBBAC5F000A0639 /* POTDViewController.swift */; };
 		8962E8501FBBAC5F000A0639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8962E84E1FBBAC5F000A0639 /* Main.storyboard */; };
 		8962E8521FBBAC5F000A0639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8962E8511FBBAC5F000A0639 /* Assets.xcassets */; };
 		8962E8551FBBAC5F000A0639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8962E8531FBBAC5F000A0639 /* LaunchScreen.storyboard */; };
+		8962E85D1FBBBC19000A0639 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962E85C1FBBBC19000A0639 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8962E8471FBBAC5F000A0639 /* NASA PICTURE OF THE DAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA PICTURE OF THE DAY.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8962E84A1FBBAC5F000A0639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8962E84C1FBBAC5F000A0639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8962E84C1FBBAC5F000A0639 /* POTDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POTDViewController.swift; sourceTree = "<group>"; };
 		8962E84F1FBBAC5F000A0639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8962E8511FBBAC5F000A0639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8962E8541FBBAC5F000A0639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8962E8561FBBAC5F000A0639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8962E85C1FBBBC19000A0639 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				8962E84A1FBBAC5F000A0639 /* AppDelegate.swift */,
-				8962E84C1FBBAC5F000A0639 /* ViewController.swift */,
+				8962E85C1FBBBC19000A0639 /* DatePickerViewController.swift */,
+				8962E84C1FBBAC5F000A0639 /* POTDViewController.swift */,
 				8962E84E1FBBAC5F000A0639 /* Main.storyboard */,
 				8962E8511FBBAC5F000A0639 /* Assets.xcassets */,
 				8962E8531FBBAC5F000A0639 /* LaunchScreen.storyboard */,
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8962E84D1FBBAC5F000A0639 /* ViewController.swift in Sources */,
+				8962E85D1FBBBC19000A0639 /* DatePickerViewController.swift in Sources */,
+				8962E84D1FBBAC5F000A0639 /* POTDViewController.swift in Sources */,
 				8962E84B1FBBAC5F000A0639 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
